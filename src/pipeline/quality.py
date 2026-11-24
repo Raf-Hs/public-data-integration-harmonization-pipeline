@@ -139,11 +139,9 @@ def run_quality_checks(df: pd.DataFrame, expected_years: range = range(START_YEA
 
     if "value" in df.columns:
         # numeric check: non-null values must be numeric (already coerced); detect rows where raw was non-numeric?
-        # Check for infinities.
+        # Check for non-finite values.
         import numpy as np
 
-        inf_count = int(np.isinf(df["value"].replace({pd.NA: 0})).sum()) if len(df) else 0
-        # simpler:
         try:
             inf_count = int(np.isinf(df["value"].astype(float)).sum())
         except Exception:

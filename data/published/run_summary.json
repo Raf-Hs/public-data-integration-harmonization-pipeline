@@ -8,7 +8,7 @@
   "countries": 5,
   "indicators": 5,
   "quality_report": {
-    "generated_at": "2026-11-24T14:43:24.080034+00:00",
+    "generated_at": "2026-11-24T15:29:03.944540+00:00",
     "total_records": 250,
     "passed": true,
     "error_count": 0,
@@ -211,18 +211,18 @@
     ]
   },
   "outputs": {
-    "csv": "data/published/harmonised_dataset.csv",
-    "parquet": "data/published/harmonised_dataset.parquet",
-    "duckdb": "data/published/analytics.duckdb"
+    "csv": "data\\published\\harmonised_dataset.csv",
+    "parquet": "data\\published\\harmonised_dataset.parquet",
+    "duckdb": "data\\published\\analytics.duckdb"
   },
   "charts": [
-    "reports/figures/population_comparison.png",
-    "reports/figures/gdp_per_capita_trends.png",
-    "reports/figures/life_expectancy_trends.png",
-    "reports/figures/unemployment_comparison.png",
-    "reports/figures/electricity_access_trends.png",
-    "reports/figures/missing_observation_distribution.png",
-    "reports/figures/data_coverage.png",
-    "reports/figures/data_quality_results.png"
+    "reports\\figures\\population_comparison.png",
+    "reports\\figures\\gdp_per_capita_trends.png",
+    "reports\\figures\\life_expectancy_trends.png",
+    "reports\\figures\\unemployment_comparison.png",
+    "reports\\figures\\electricity_access_trends.png",
+    "reports\\figures\\missing_observation_distribution.png",
+    "reports\\figures\\data_coverage.png",
+    "reports\\figures\\data_quality_results.png"
   ]
 }

@@ -66,13 +66,11 @@ def harmonize(cleaned_df: pd.DataFrame) -> pd.DataFrame:
         raise ValueError("Unparseable year encountered during harmonization")
 
     # Preserve original indicator identifiers; standardize units from config.
-    df["unit"] = df["indicator_id"].map(
-        lambda i: INDICATORS.get(str(i), {}).get("unit", df.loc[df["indicator_id"] == i, "unit"].iloc[0] if (df["indicator_id"] == i).any() else "")
-    )
+    df["unit"] = df["indicator_id"].map(lambda i: INDICATORS.get(str(i), {}).get("unit", ""))
 
-    # Standardize iso2 from mapping when possible.
+    # Standardize ISO-2 codes from the ISO-3 mapping.
     iso3_to_iso2 = {v: k for k, v in ISO2_TO_ISO3.items()}
-    df["country_iso2"] = df["country_iso3"].map(lambda c: iso3_to_iso2.get(c, df.loc[df["country_iso3"] == c, "country_iso2"].iloc[0] if (df["country_iso3"] == c).any() else ""))
+    df["country_iso2"] = df["country_iso3"].map(lambda c: iso3_to_iso2.get(c, ""))
 
     # Source traceability.
     df["source"] = "World Bank Indicators API v2"

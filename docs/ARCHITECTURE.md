@@ -4,82 +4,26 @@
 
 ```mermaid
 flowchart LR
-    A[World Bank API] --> B[Extraction Layer - RAW]
-    B --> C[Cleaning Layer - CLEANED]
-    C --> D[Harmonization Layer - HARMONISED]
+    A[World Bank API] --> B[RAW]
+    B --> C[CLEANED]
+    C --> D[HARMONISED]
     D --> E[Quality Gate]
-    E -->|pass| F[Publication Layer - PUBLISHED]
+    E -->|pass| F[PUBLISHED]
     E -->|fail| G[Block publication]
     F --> H[CSV / Parquet / DuckDB]
     F --> I[Charts]
     F --> J[Data Dictionary]
 ```
 
-## Data lifecycle
+## Processing stages
 
-```mermaid
-flowchart TD
-    R[Raw JSON] --> C[Cleaned CSV]
-    C --> H[Harmonised CSV/Parquet]
-    H --> Q[Quality Report]
-    Q --> P[Published datasets]
-```
+1. **Extract** — query the World Bank API with pagination, retries, and timeouts; preserve raw JSON.
+2. **Clean** — normalize columns, parse years, standardize missing values, detect duplicates, validate required fields.
+3. **Harmonize** — standardize ISO-3 codes, country names, years, and units; attach public metadata.
+4. **Validate** — run structural, completeness, uniqueness, validity, consistency, and time-series checks.
+5. **Publish** — write CSV, Parquet, and DuckDB only when validation passes; generate the data dictionary.
+6. **Analyze and visualize** — run DuckDB SQL queries and generate charts from published data.
 
-## API ingestion workflow
+## Automation
 
-```mermaid
-sequenceDiagram
-    participant P as Pipeline
-    participant API as World Bank API
-    P->>API: GET /country/{code}/indicator/{id}
-    API-->>P: JSON page 1
-    P->>API: GET ... page 2 (if needed)
-    API-->>P: JSON page n
-    P->>P: Persist raw JSON
-```
-
-## Quality validation workflow
-
-```mermaid
-flowchart TD
-    D[Harmonised data] --> S[Structural checks]
-    S --> C[Completeness checks]
-    C --> U[Uniqueness checks]
-    U --> V[Validity checks]
-    V --> CS[Consistency checks]
-    CS --> T[Time-series checks]
-    T --> G{Errors?}
-    G -->|none| P[Publish]
-    G -->|any| B[Block]
-```
-
-## Analytical data model
-
-```mermaid
-erDiagram
-    HARMONISED_DATA {
-        string country_iso3
-        string country_iso2
-        string country_name
-        string country_type
-        string region
-        string income_level
-        string indicator_id
-        string indicator_name
-        int year
-        float value
-        string unit
-        string source
-        string extracted_at
-    }
-```
-
-## Automation workflow
-
-```mermaid
-flowchart LR
-    GH[GitHub Actions] --> CI[CI: tests on push/PR]
-    GH --> SCH[Scheduled weekly refresh]
-    SCH --> RUN[Run pipeline]
-    RUN --> PUB[Commit refreshed data]
-```
+GitHub Actions provides CI on push and pull requests and a weekly scheduled refresh that reruns the pipeline, tests, and commits refreshed data when changes exist.

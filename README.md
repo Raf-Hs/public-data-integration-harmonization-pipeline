@@ -1,81 +1,53 @@
 # Public Data Integration & Harmonization Pipeline
 
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![Tests](https://img.shields.io/badge/tests-28%20passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+An automated Python and SQL pipeline that transforms raw public socioeconomic data into validated, analytics-ready datasets.
 
-## Executive summary
+## The problem
 
-This project is an independent portfolio Proof of Concept that demonstrates the practical responsibilities of a **Data Pipeline Specialist (Python, SQL)**: querying public APIs, preserving raw data, automating acquisition, cleaning, harmonizing, validating, and publishing analytics-ready datasets.
+Public data sources often contain different structures, inconsistent country identifiers, different measurement units, missing observations, and inconsistent metadata. These issues complicate cross-country analysis and delay insight.
 
-It integrates five World Bank indicators for five countries over 2015-2024 into a single, validated, analytics-ready dataset, and exposes the results through CSV, Parquet, DuckDB, SQL, charts, and documentation.
+## The solution
 
-> This is an independent portfolio project. It is not an official YouthShare project and is not affiliated with or endorsed by YouthShare or any other organization. Only publicly available data is used.
-
-## Business problem
-
-Public socioeconomic data is freely available but fragmented, inconsistently structured, and rarely ready for direct analysis. Analysts lose time locating, cleaning, and reconciling datasets before producing insight. Decision-makers need comparable indicators across countries and years; without standardization, comparisons are misleading.
-
-## Why public data integration is challenging
-
-- Inconsistent schemas and column names across endpoints.
-- Missing observations that must not be confused with zero.
-- Mixed identifier systems (ISO-2 vs ISO-3, regional aggregates mixed with countries).
-- Empty unit fields requiring documented canonical units.
-- Pagination and transient network failures.
-- Duplicate records and unexpected schema changes.
-
-## Proposed solution
-
-An automated four-layer pipeline:
-
-1. **RAW**: retrieve and preserve original API responses.
-2. **CLEANED**: normalize columns, types, missing values, duplicates.
-3. **HARMONISED**: standardize country codes, names, years, units.
-4. **PUBLISHED**: validate, then publish CSV, Parquet, DuckDB, plus data dictionary and charts.
-
-## Architecture diagram
+The pipeline retrieves five World Bank indicators for five countries from 2015 to 2024, preserves the raw responses, cleans and harmonizes the data, validates quality, and publishes analytics-ready outputs.
 
 ```mermaid
 flowchart LR
-    A[World Bank API] --> B[Extraction - RAW]
-    B --> C[Cleaning - CLEANED]
-    C --> D[Harmonization - HARMONISED]
-    D --> E[Quality Gate]
-    E -->|pass| F[Publication - PUBLISHED]
+    A[World Bank API] --> B[RAW]
+    B --> C[CLEANED]
+    C --> D[HARMONISED]
+    D --> E[Quality Validation]
+    E -->|pass| F[Published Datasets]
     E -->|fail| G[Block publication]
-    F --> H[CSV / Parquet / DuckDB]
-    F --> I[Charts]
-    F --> J[Data Dictionary]
+    F --> H[SQL Analytics]
+    F --> I[Visualizations]
 ```
 
-## Data lifecycle
+Each stage has a short responsibility:
 
-```mermaid
-flowchart TD
-    R[Raw JSON] --> C[Cleaned CSV]
-    C --> H[Harmonised CSV/Parquet]
-    H --> Q[Quality Report]
-    Q --> P[Published datasets]
-```
+- **RAW** retrieves and preserves the original API responses.
+- **CLEANED** normalizes columns, types, missing values, and duplicates.
+- **HARMONISED** standardizes ISO-3 country codes, names, years, and units.
+- **Quality Validation** runs structural, completeness, uniqueness, validity, consistency, and time-series checks.
+- **Published Datasets** writes CSV, Parquet, and DuckDB only when validation passes.
 
-## Technology stack
+## Results
 
-| Technology | Purpose |
-|---|---|
-| Python | Pipeline implementation |
-| Pandas | Data transformation |
-| Requests | API communication |
-| PyArrow | Parquet |
-| DuckDB | SQL analytics |
-| Pytest | Automated testing |
-| Matplotlib | Charts |
-| Mermaid | Architecture diagrams |
-| GitHub Actions | CI/CD and scheduled refresh |
+| Metric | Value |
+|---|---:|
+| Countries | 5 |
+| Indicators | 5 |
+| Records extracted | 250 |
+| Valid records | 250 |
+| Missing observations | 0 |
+| Rejected records | 0 |
+| Quality errors | 0 |
+| Quality warnings | 1 |
+| Automated tests | 28 passing |
+| GitHub Actions workflows executed | 2 |
 
-## Data sources and indicators
+The single warning is a 119.5% year-over-year increase in the USA unemployment indicator in 2020, consistent with the COVID-19 period. Zero missing observations reflects the current selected dataset and execution, not a general guarantee of complete coverage.
 
-Source: World Bank Indicators API v2 (`https://api.worldbank.org/v2`).
+Indicators:
 
 | Indicator | Identifier | Unit |
 |---|---|---|
@@ -85,133 +57,70 @@ Source: World Bank Indicators API v2 (`https://api.worldbank.org/v2`).
 | Unemployment, total | SL.UEM.TOTL.ZS | Percentage |
 | Access to electricity | EG.ELC.ACCS.ZS | Percentage |
 
-Countries: Mexico (MEX), United States (USA), Brazil (BRA), India (IND), Germany (DEU). Period: 2015-2024.
+## Data visualization
 
-## Data quality framework
-
-Automated checks: structural, completeness, uniqueness, validity, consistency, and time-series. A publication gate blocks publishing when any error-level check fails. Missing observations are reported as warnings/info, never treated as zero. Unusual year-over-year changes (>50%) are flagged as warnings, not errors.
-
-See `docs/DATA_QUALITY.md`.
-
-## Actual results
-
-From the latest run:
-
-- Countries processed: 5
-- Indicators processed: 5
-- Records extracted: 250
-- Valid records: 250
-- Missing observations: 0
-- Rejected records: 0
-- Quality errors: 0
-- Quality warnings: 1 (USA unemployment 2020 spike, +119.5%)
-- Tests: 28 passing
-
-Generated outputs: `data/published/harmonised_dataset.csv`, `.parquet`, `analytics.duckdb`, `data_dictionary.csv`, `run_summary.json`, `data/quality/quality_report.json`, and 8 charts in `reports/figures/`.
-
-## Analytical insights
-
-- Population grows steadily across all five countries; India and the US are the largest.
-- GDP per capita (current US$) is highest in the United States and Germany; gaps are large and persistent.
-- Life expectancy is highest in Germany; India shows the largest improvement over the period.
-- Unemployment spiked in the United States in 2020 (COVID-19), flagged as an unusual change.
-- Electricity access is near-universal in MEX/USA/BRA/DEU; India shows strong progress toward universal access.
-
-## Visualizations
-
-### Population comparison
-
-![Population comparison](reports/figures/population_comparison.png)
-
-### GDP per capita trends
+GDP per capita trends across countries:
 
 ![GDP per capita trends](reports/figures/gdp_per_capita_trends.png)
 
-### Life expectancy trends
+Life expectancy trends:
 
 ![Life expectancy trends](reports/figures/life_expectancy_trends.png)
 
-### Unemployment comparison
+Population comparison:
+
+![Population comparison](reports/figures/population_comparison.png)
+
+Unemployment comparison:
 
 ![Unemployment comparison](reports/figures/unemployment_comparison.png)
 
-### Electricity access trends
-
-![Electricity access trends](reports/figures/electricity_access_trends.png)
-
-### Missing observation distribution
-
-![Missing observation distribution](reports/figures/missing_observation_distribution.png)
-
-### Data coverage by country and indicator
+Data coverage by country and indicator:
 
 ![Data coverage](reports/figures/data_coverage.png)
 
-### Data quality results
+All charts use actual pipeline outputs. Additional generated charts are available in `reports/figures/`.
 
-![Data quality results](reports/figures/data_quality_results.png)
+## Technology
 
-## Repository structure
+Python, Pandas, Requests, PyArrow, DuckDB, Pytest, Matplotlib, GitHub Actions.
 
-```
-.
-├── .github/workflows/      # CI and scheduled refresh
-├── data/                   # raw, cleaned, harmonised, published, quality
-├── docs/                   # supporting documentation
-├── reports/figures/        # generated charts
-├── sql/                    # DuckDB analytical queries
-├── src/pipeline/           # pipeline source code
-├── tests/                  # unit, integration, e2e tests
-├── main.py                 # entry point
-├── requirements.txt
-└── pyproject.toml
-```
+## Engineering capabilities
 
-## Installation instructions
+- **API integration:** World Bank API client with pagination, retries, and timeouts.
+- **Raw data preservation:** original responses stored with extraction timestamps.
+- **Cleaning and harmonization:** normalized columns, standardized identifiers, years, and units.
+- **Data quality:** automated checks with a publication gate that blocks invalid datasets.
+- **SQL analytics:** DuckDB queries over the published dataset.
+- **Automated testing:** 28 unit, integration, and end-to-end tests using controlled fixtures.
+- **Scheduled execution:** CI on push and pull requests plus a weekly data refresh.
+
+## How to run
 
 ```bash
-git clone https://github.com/Raf-Hs/public-data-integration-harmonization-pipeline.git
-cd public-data-integration-harmonization-pipeline
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS/Linux
-source .venv/bin/activate
 pip install -r requirements.txt -r requirements-dev.txt
-```
-
-## Execution instructions
-
-```bash
 python main.py
+python -m pytest
 ```
 
 Outputs are written to `data/` and `reports/figures/`.
 
-## Testing
-
-```bash
-python -m pytest
-```
-
-28 tests pass. Tests use controlled fixtures and do not require live API access.
-
-## Automation
-
-- `ci.yml`: runs on push/PR, installs dependencies, compiles, runs tests.
-- `scheduled_refresh.yml`: weekly Monday 06:00 UTC, runs pipeline, tests, and commits refreshed data.
-
 ## Limitations
 
-See `docs/LIMITATIONS.md`. Fixed country/indicator scope, depends on API availability, static charts, embedded country metadata.
+- One data provider.
+- Five countries and five indicators.
+- Static visualizations.
+- No interactive dashboard.
+- No incremental data versioning.
+- No production-grade orchestration.
 
-## Future improvements
+## Disclaimer
 
-- Add more countries and indicators via configuration.
-- Add a dashboard (Looker Studio) on top of published CSV.
-- Add incremental refresh and historical versioning.
-- Add data contracts and schema validation with Pydantic.
+This is an independent portfolio project inspired by publicly described Data Pipeline Specialist responsibilities. It is not affiliated with or endorsed by YouthShare. Only publicly available data is used.
 
-## License
+## Documentation
 
-MIT
+- Architecture: `docs/ARCHITECTURE.md`
+- Data model: `docs/DATA_MODEL.md`
+- Data quality: `docs/DATA_QUALITY.md`
+- Data dictionary: `docs/DATA_DICTIONARY.md`
