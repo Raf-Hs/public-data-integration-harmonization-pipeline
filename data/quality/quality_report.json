@@ -1,0 +1,203 @@
+{
+  "generated_at": "2026-11-24T14:30:31.502305+00:00",
+  "total_records": 250,
+  "passed": true,
+  "error_count": 0,
+  "warning_count": 1,
+  "info_count": 11,
+  "errors": [],
+  "warnings": [
+    {
+      "check": "timeseries.unusual_changes",
+      "message": "1 year-over-year changes exceed 50%.",
+      "details": {
+        "changes": [
+          {
+            "country": "USA",
+            "indicator": "SL.UEM.TOTL.ZS",
+            "year": 2020,
+            "change_pct": 119.54
+          }
+        ]
+      }
+    }
+  ],
+  "info": [
+    {
+      "check": "structural.required_columns",
+      "message": "All required columns present."
+    },
+    {
+      "check": "completeness.country_iso3",
+      "message": "No missing values in 'country_iso3'."
+    },
+    {
+      "check": "completeness.indicator_id",
+      "message": "No missing values in 'indicator_id'."
+    },
+    {
+      "check": "completeness.year",
+      "message": "No missing values in 'year'."
+    },
+    {
+      "check": "completeness.value",
+      "message": "0 missing observations (value is null).",
+      "details": {
+        "missing_observations": 0
+      }
+    },
+    {
+      "check": "uniqueness.duplicates",
+      "message": "No duplicate country-indicator-year records."
+    },
+    {
+      "check": "validity.country",
+      "message": "All country identifiers valid."
+    },
+    {
+      "check": "validity.indicator",
+      "message": "All indicator identifiers valid."
+    },
+    {
+      "check": "consistency.units",
+      "message": "Units consistent per indicator."
+    },
+    {
+      "check": "timeseries.missing_observations",
+      "message": "No missing years in any series."
+    },
+    {
+      "check": "coverage.summary",
+      "message": "5 countries x 5 indicators.",
+      "details": {
+        "rows": [
+          {
+            "country_iso3": "BRA",
+            "indicator_id": "EG.ELC.ACCS.ZS",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "BRA",
+            "indicator_id": "NY.GDP.PCAP.CD",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "BRA",
+            "indicator_id": "SL.UEM.TOTL.ZS",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "BRA",
+            "indicator_id": "SP.DYN.LE00.IN",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "BRA",
+            "indicator_id": "SP.POP.TOTL",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "DEU",
+            "indicator_id": "EG.ELC.ACCS.ZS",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "DEU",
+            "indicator_id": "NY.GDP.PCAP.CD",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "DEU",
+            "indicator_id": "SL.UEM.TOTL.ZS",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "DEU",
+            "indicator_id": "SP.DYN.LE00.IN",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "DEU",
+            "indicator_id": "SP.POP.TOTL",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "IND",
+            "indicator_id": "EG.ELC.ACCS.ZS",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "IND",
+            "indicator_id": "NY.GDP.PCAP.CD",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "IND",
+            "indicator_id": "SL.UEM.TOTL.ZS",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "IND",
+            "indicator_id": "SP.DYN.LE00.IN",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "IND",
+            "indicator_id": "SP.POP.TOTL",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "MEX",
+            "indicator_id": "EG.ELC.ACCS.ZS",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "MEX",
+            "indicator_id": "NY.GDP.PCAP.CD",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "MEX",
+            "indicator_id": "SL.UEM.TOTL.ZS",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "MEX",
+            "indicator_id": "SP.DYN.LE00.IN",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "MEX",
+            "indicator_id": "SP.POP.TOTL",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "USA",
+            "indicator_id": "EG.ELC.ACCS.ZS",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "USA",
+            "indicator_id": "NY.GDP.PCAP.CD",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "USA",
+            "indicator_id": "SL.UEM.TOTL.ZS",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "USA",
+            "indicator_id": "SP.DYN.LE00.IN",
+            "n_obs": 10
+          },
+          {
+            "country_iso3": "USA",
+            "indicator_id": "SP.POP.TOTL",
+            "n_obs": 10
+          }
+        ]
+      }
+    }
+  ]
+}

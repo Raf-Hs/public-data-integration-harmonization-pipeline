@@ -1,0 +1,179 @@
+{
+  "endpoint": "/country/MEX/indicator/SL.UEM.TOTL.ZS",
+  "params": {
+    "country": "MEX",
+    "indicator": "SL.UEM.TOTL.ZS",
+    "date": "2015:2024"
+  },
+  "metadata": {
+    "page": 1,
+    "pages": 1,
+    "per_page": 100,
+    "total": 10,
+    "sourceid": "2",
+    "lastupdated": "2026-11-11"
+  },
+  "extracted_at": "2026-11-24T14:28:41.968888+00:00",
+  "records": [
+    {
+      "indicator": {
+        "id": "SL.UEM.TOTL.ZS",
+        "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2024",
+      "value": 2.678,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SL.UEM.TOTL.ZS",
+        "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2023",
+      "value": 2.765,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SL.UEM.TOTL.ZS",
+        "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2022",
+      "value": 3.256,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SL.UEM.TOTL.ZS",
+        "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2021",
+      "value": 4.019,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SL.UEM.TOTL.ZS",
+        "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2020",
+      "value": 4.44,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SL.UEM.TOTL.ZS",
+        "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2019",
+      "value": 3.477,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SL.UEM.TOTL.ZS",
+        "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2018",
+      "value": 3.275,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SL.UEM.TOTL.ZS",
+        "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2017",
+      "value": 3.419,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SL.UEM.TOTL.ZS",
+        "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2016",
+      "value": 3.853,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SL.UEM.TOTL.ZS",
+        "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2015",
+      "value": 4.311,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    }
+  ]
+}

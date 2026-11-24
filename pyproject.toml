@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "public-data-integration-harmonization-pipeline"
+version = "1.0.0"
+description = "Automated pipeline integrating and harmonizing public socioeconomic data from the World Bank."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "requests>=2.31",
+    "pyarrow>=14.0",
+    "duckdb>=1.0",
+    "matplotlib>=3.7",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
