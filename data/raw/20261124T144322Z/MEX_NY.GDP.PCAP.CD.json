@@ -1,0 +1,179 @@
+{
+  "endpoint": "/country/MEX/indicator/NY.GDP.PCAP.CD",
+  "params": {
+    "country": "MEX",
+    "indicator": "NY.GDP.PCAP.CD",
+    "date": "2015:2024"
+  },
+  "metadata": {
+    "page": 1,
+    "pages": 1,
+    "per_page": 100,
+    "total": 10,
+    "sourceid": "2",
+    "lastupdated": "2026-11-11"
+  },
+  "extracted_at": "2026-11-24T14:43:22.927104+00:00",
+  "records": [
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2024",
+      "value": 13988.0423745241,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2023",
+      "value": 13830.843848864,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2022",
+      "value": 11405.7940469896,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2021",
+      "value": 10314.0506733708,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2020",
+      "value": 8841.27074929751,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2019",
+      "value": 10369.5553593527,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2018",
+      "value": 10084.7937570364,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2017",
+      "value": 9649.27816729586,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2016",
+      "value": 9097.92397674769,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "MX",
+        "value": "Mexico"
+      },
+      "countryiso3code": "MEX",
+      "date": "2015",
+      "value": 10021.2386113616,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    }
+  ]
+}

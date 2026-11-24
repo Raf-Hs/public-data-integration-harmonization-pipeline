@@ -1,0 +1,179 @@
+{
+  "endpoint": "/country/BRA/indicator/NY.GDP.PCAP.CD",
+  "params": {
+    "country": "BRA",
+    "indicator": "NY.GDP.PCAP.CD",
+    "date": "2015:2024"
+  },
+  "metadata": {
+    "page": 1,
+    "pages": 1,
+    "per_page": 100,
+    "total": 10,
+    "sourceid": "2",
+    "lastupdated": "2026-11-11"
+  },
+  "extracted_at": "2026-11-24T14:43:23.331382+00:00",
+  "records": [
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "BR",
+        "value": "Brazil"
+      },
+      "countryiso3code": "BRA",
+      "date": "2024",
+      "value": 10310.5486973693,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "BR",
+        "value": "Brazil"
+      },
+      "countryiso3code": "BRA",
+      "date": "2023",
+      "value": 10377.5892792557,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "BR",
+        "value": "Brazil"
+      },
+      "countryiso3code": "BRA",
+      "date": "2022",
+      "value": 9281.33334441234,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "BR",
+        "value": "Brazil"
+      },
+      "countryiso3code": "BRA",
+      "date": "2021",
+      "value": 7972.5366498646,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "BR",
+        "value": "Brazil"
+      },
+      "countryiso3code": "BRA",
+      "date": "2020",
+      "value": 7074.19378337644,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "BR",
+        "value": "Brazil"
+      },
+      "countryiso3code": "BRA",
+      "date": "2019",
+      "value": 9029.83326681073,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "BR",
+        "value": "Brazil"
+      },
+      "countryiso3code": "BRA",
+      "date": "2018",
+      "value": 9300.66164923219,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "BR",
+        "value": "Brazil"
+      },
+      "countryiso3code": "BRA",
+      "date": "2017",
+      "value": 10080.5092819305,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "BR",
+        "value": "Brazil"
+      },
+      "countryiso3code": "BRA",
+      "date": "2016",
+      "value": 8836.28652735657,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.PCAP.CD",
+        "value": "GDP per capita (current US$)"
+      },
+      "country": {
+        "id": "BR",
+        "value": "Brazil"
+      },
+      "countryiso3code": "BRA",
+      "date": "2015",
+      "value": 8936.19661712113,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "endpoint": "/country/USA/indicator/EG.ELC.ACCS.ZS",
+  "params": {
+    "country": "USA",
+    "indicator": "EG.ELC.ACCS.ZS",
+    "date": "2015:2024"
+  },
+  "metadata": {
+    "page": 1,
+    "pages": 1,
+    "per_page": 100,
+    "total": 10,
+    "sourceid": "2",
+    "lastupdated": "2026-11-11"
+  },
+  "extracted_at": "2026-11-24T14:43:23.275910+00:00",
+  "records": [
+    {
+      "indicator": {
+        "id": "EG.ELC.ACCS.ZS",
+        "value": "Access to electricity (% of population)"
+      },
+      "country": {
+        "id": "US",
+        "value": "United States"
+      },
+      "countryiso3code": "USA",
+      "date": "2024",
+      "value": 100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "EG.ELC.ACCS.ZS",
+        "value": "Access to electricity (% of population)"
+      },
+      "country": {
+        "id": "US",
+        "value": "United States"
+      },
+      "countryiso3code": "USA",
+      "date": "2023",
+      "value": 100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "EG.ELC.ACCS.ZS",
+        "value": "Access to electricity (% of population)"
+      },
+      "country": {
+        "id": "US",
+        "value": "United States"
+      },
+      "countryiso3code": "USA",
+      "date": "2022",
+      "value": 100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "EG.ELC.ACCS.ZS",
+        "value": "Access to electricity (% of population)"
+      },
+      "country": {
+        "id": "US",
+        "value": "United States"
+      },
+      "countryiso3code": "USA",
+      "date": "2021",
+      "value": 100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "EG.ELC.ACCS.ZS",
+        "value": "Access to electricity (% of population)"
+      },
+      "country": {
+        "id": "US",
+        "value": "United States"
+      },
+      "countryiso3code": "USA",
+      "date": "2020",
+      "value": 100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "EG.ELC.ACCS.ZS",
+        "value": "Access to electricity (% of population)"
+      },
+      "country": {
+        "id": "US",
+        "value": "United States"
+      },
+      "countryiso3code": "USA",
+      "date": "2019",
+      "value": 100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "EG.ELC.ACCS.ZS",
+        "value": "Access to electricity (% of population)"
+      },
+      "country": {
+        "id": "US",
+        "value": "United States"
+      },
+      "countryiso3code": "USA",
+      "date": "2018",
+      "value": 100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "EG.ELC.ACCS.ZS",
+        "value": "Access to electricity (% of population)"
+      },
+      "country": {
+        "id": "US",
+        "value": "United States"
+      },
+      "countryiso3code": "USA",
+      "date": "2017",
+      "value": 100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "EG.ELC.ACCS.ZS",
+        "value": "Access to electricity (% of population)"
+      },
+      "country": {
+        "id": "US",
+        "value": "United States"
+      },
+      "countryiso3code": "USA",
+      "date": "2016",
+      "value": 100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "EG.ELC.ACCS.ZS",
+        "value": "Access to electricity (% of population)"
+      },
+      "country": {
+        "id": "US",
+        "value": "United States"
+      },
+      "countryiso3code": "USA",
+      "date": "2015",
+      "value": 100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    }
+  ]
+}
