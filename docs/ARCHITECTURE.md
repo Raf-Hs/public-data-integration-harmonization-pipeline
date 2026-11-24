@@ -1,20 +1,5 @@
 # Architecture
 
-## High-level architecture
-
-```mermaid
-flowchart LR
-    A[World Bank API] --> B[RAW]
-    B --> C[CLEANED]
-    C --> D[HARMONISED]
-    D --> E[Quality Gate]
-    E -->|pass| F[PUBLISHED]
-    E -->|fail| G[Block publication]
-    F --> H[CSV / Parquet / DuckDB]
-    F --> I[Charts]
-    F --> J[Data Dictionary]
-```
-
 ## Processing stages
 
 1. **Extract** — query the World Bank API with pagination, retries, and timeouts; preserve raw JSON.
